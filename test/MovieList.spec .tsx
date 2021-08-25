@@ -30,79 +30,10 @@ test('should render multiples movies title and poster', () => {
         harryPotterAndTheChamberOfSecretsMovie,
     ]
     // When
-    const component = shallow(<MovieList movies={movies} />);
-
-    // Then
-    expect(component).toContainReact(<Movie movie={harryPotterAndThePhilosophersStoneMovie} />)
-    expect(component).toContainReact(<Movie movie={harryPotterAndTheChamberOfSecretsMovie} />)
-});
-
-test('should filter the movies based on search terms (movie 1)', () => {
-    // Given
-    const movies: IMovie[] = [
-        harryPotterAndThePhilosophersStoneMovie,
-        harryPotterAndTheChamberOfSecretsMovie,
-    ]
-
-    // When
-    const component = shallow(<MovieList movies={movies} />);
-
-    // Then
-    expect(component).not.toContainReact(<Movie movie={harryPotterAndThePhilosophersStoneMovie} />)
-    expect(component).toContainReact(<Movie movie={harryPotterAndTheChamberOfSecretsMovie} />)
-});
-
-test('should filter the movies based on search terms (movie 2)', () => {
-    // Given
-    const movies: IMovie[] = [
-        harryPotterAndThePhilosophersStoneMovie,
-        harryPotterAndTheChamberOfSecretsMovie,
-    ]
-
-    // When
-    const component = shallow(<MovieList  movies={movies} />);
-
-    // Then
-    expect(component).toContainReact(<Movie movie={harryPotterAndThePhilosophersStoneMovie} />)
-    expect(component).not.toContainReact(<Movie movie={harryPotterAndTheChamberOfSecretsMovie} />)
-});
-
-
-test('should category filter movies based on active filter', () => {
-    // Given
-    const genres: IGenre[] = [
-        {
-            id: 12,
-            name: "Adventure",
-        },
-        {
-            id: 18,
-            name: "Drama",
-        },
-    ]
-    const titanicMovie = {
-        id: 597,
-        title: 'Titanic',
-        poster_path: '/kHXEpyfl6zqn8a6YuozZUujufXf.jpg',
-        genre_ids: [18, 10749, 53],
-        backdrop_path: '/fVcZErSWa7gyENuj8IWp8eAfCnL.jpg',
-    };
-    const thorMovie = {
-        id: 10195,
-        title: 'Thor',
-        poster_path: '/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg',
-        genre_ids: [12, 14, 28],
-        backdrop_path: '/6UxFfo8K3vcihtUpX1ek2ucGeEZ.jpg',
-    };
-    const movies: IMovie[] = [
-        titanicMovie,
-        thorMovie,
-    ]
-
-    // When
     const component = shallow(<MovieList movies={movies}/>);
 
     // Then
-    expect(component).toContainReact(<Movie movie={titanicMovie} />);
-    expect(component).not.toContainReact(<Movie movie={thorMovie} />);
+    expect(component).toContainReact(<Movie movie={harryPotterAndThePhilosophersStoneMovie} />)
+    expect(component).toContainReact(<Movie movie={harryPotterAndTheChamberOfSecretsMovie} />)
 });
+
