@@ -1,4 +1,4 @@
-import {ICategory, IGenre, IMovie} from '../src/types';
+import {IMovie} from '../src/types';
 import {shallow} from 'enzyme';
 import React from 'react';
 import {Movie} from '../src/components/Movie';

@@ -6,7 +6,6 @@ import 'jest-enzyme'
 import { Footer } from '../src/components/Footer';
 import { AppContextProvider } from '../src/context/AppContextProvider';
 import { QueryClient, QueryClientProvider } from 'react-query'
-import {render} from "@testing-library/react"
 
 const queryClient = new QueryClient();
 

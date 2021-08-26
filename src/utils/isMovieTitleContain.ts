@@ -1,3 +1,4 @@
-import { IMovie } from "../types";
+import {IMovie} from "../types";
 
-export const isMovieTitleContain = (movie: IMovie, title: string): boolean => movie.title.toLocaleLowerCase().includes(title.toLocaleLowerCase())
+export const isMovieTitleContain = (movie: IMovie, title: string): boolean =>
+  movie.title.toLocaleLowerCase().includes(title.toLocaleLowerCase());

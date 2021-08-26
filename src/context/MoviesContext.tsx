@@ -12,8 +12,6 @@ export const MoviesProvider: React.FC = (props) => {
   const [movies, setMovies] = useState<IMovie[]>([]);
   const {
     data,
-    isLoading,
-    error,
   }: UseQueryResult<IMovie[], Error> = useQuery<
   IMovie[],
     Error
@@ -21,22 +19,21 @@ export const MoviesProvider: React.FC = (props) => {
 
   useEffect(() => {
    if(data){
-     console.log(data, "testing")
      setMovies(data)
    }
   }, [data]);
 
   const filterMovies = (searchTerm: string) => {
-    let filtered = data ? data.filter((movie: IMovie) =>
+    let filtered = data?.filter((movie: IMovie) =>
       isMovieTitleContain(movie, searchTerm)
-    ) : [];
+    ) || [];
     setMovies(filtered);
   };
 
   const filterMoviesBasedOnCategory = (category: string) => {
-    let filtered = data ? data.filter((movie: IMovie) =>
+    let filtered = data?.filter((movie: IMovie) =>
       isMovieBelongsToCategory(genres)(movie, category)
-    ) : [];
+    ) || [];
     setMovies(filtered);
   };
 

@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface Props {
+interface ISearchProps {
  searchCallback: (searchTerms: string) => void;  
 }
 
-export function Search({searchCallback}: Props) {
+export function Search({searchCallback}: ISearchProps) {
     return (
         <input
-        role={"search"}
+        role="search"
         type="text"
         name="Search"
         placeholder="Search"

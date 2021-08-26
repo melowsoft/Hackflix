@@ -1,5 +1,5 @@
 import {IGenre, IMovie} from '../src/types';
-import {isMovieBelongsToCategory} from '../src/utils/isMovieBelongsToCategory';
+import {isMovieBelongsToCategory} from '../src/utils';
 
 const allGenres: IGenre[] = [
     {
